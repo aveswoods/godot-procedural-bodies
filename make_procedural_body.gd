@@ -25,7 +25,7 @@ extends EditorScript
 
 
 # Specify the curve/function here
-func _procedure_func(x):
+func _radius_func(x):
 	if x < 0.5:
 		return x
 	else:
@@ -36,9 +36,9 @@ func _procedure_func(x):
 func _run():
 	# Make body
 	var body = get_new_body(
-		funcref(self, "_procedure_func"),	# Function to be rotated around the y axis
-		Vector3(0.8, 1.0, 0.8),				# Scale of the mesh's axes
-		5, 5								# Number of rings and ring segments, respectively
+		funcref(self, "_radius_func"),	# Function to be rotated around the y axis
+		Vector3(1.0, 1.0, 1.0),				# Scale of the mesh's axes
+		3, 3								# Number of rings and ring segments, respectively
 	)
 	
 	# Save body
@@ -100,7 +100,7 @@ func get_new_body(radius_function: FuncRef, scale: Vector3 = Vector3(1.0, 1.0, 1
 			# Scaled vertex based on radius and length
 			var vertex = Vector3(
 				scale.x * rho * x,
-				scale.y * y,
+				scale.y / 2.0 * y,
 				scale.z * rho * z
 			)
 			

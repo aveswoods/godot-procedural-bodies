@@ -11,7 +11,7 @@ The function that generates these nodes is a modified version of the example cod
 
 ## Installing
 
-I recommend downloading `make_procedural_body.gd` and directly adding it your project. The rest of this repository is dedicated to explaining how to use the function and how it works.
+I recommend directly downloading `make_procedural_body.gd` and adding it your project. The rest of this repository is dedicated to explaining how to use the function and how it works.
 
 ## Using
 
@@ -22,7 +22,7 @@ edit the parameters of the call to `get_new_body` in the `_run` function directl
 
 - `radius_function`:
 
-   The function that is rotated around the y-axis is called `_procedure_func`, and this is the value passed as `radius_function`. Evaluations of this function are translated into distances from the y-axis. There are important characteristics about this function:
+   The function that is rotated around the y-axis is called `_radius_func`, and this is the value passed as `radius_function`. Evaluations of this function are translated into distances from the y-axis. There are important characteristics of this function:
    
    1. It is evaluated *only* over [0, 1], i.e., between 0 and 1 inclusive
    2. Its range over [0, 1] should also be [0, 1]. It does not *have* to be, but it is recommended
@@ -80,7 +80,7 @@ else:
 ```
 return sin(0.7 * PI * x)
 ```
-**Scale:** `(1.0, 1.0, 1.0)`
+**Scale:** `(1.0, 2.0, 1.0)`
 
 **Rings:** `50`
 
@@ -96,7 +96,7 @@ return sin(0.7 * PI * x)
 ```
 return (0.5 + 0.25 * cos(2 * PI * x))
 ```
-**Scale:** `(0.8, 1.0, 0.8)`
+**Scale:** `(0.8, 2.0, 0.8)`
 
 **Rings**: `5`
 
