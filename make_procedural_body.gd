@@ -1,6 +1,8 @@
-tool
-extends EditorScript
-
+# Author: Ava Z. Beaver
+# (MIT License)
+# ---
+# Link to Repository: https://github.com/azbeaver/godot-procedural-bodies
+#
 # This script provids a function for generating bodies whose meshes are defined by rotating a curve
 # around an axis. Here are some rules about the function:
 #
@@ -18,17 +20,17 @@ extends EditorScript
 #
 # As of now, no validation is done. If you have any bugs or errors, make sure your function does
 # not have any negative values, and that your number of rings/ segments >= 3
+tool
+extends EditorScript
+
 
 # Specify the curve/function here
 func _procedure_func(x):
-#	if x < 0.5:
-#		return x
-#	else:
-#		return 1 - x
-	
-#	return sin(0.7 * PI * x)
-	
-	return (0.5 + 0.25 * cos(2 * PI * x))
+	if x < 0.5:
+		return x
+	else:
+		return 1 - x
+
 
 # Creates and saves the body as a scene
 func _run():
