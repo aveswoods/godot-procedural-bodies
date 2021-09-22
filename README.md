@@ -86,7 +86,7 @@ return sin(0.7 * PI * x)
 
 **Segments:** `50`
 
-3.
+### 3.
 
 ![Sample photo 3](https://github.com/azbeaver/godot-procedural-bodies/blob/main/images/sample3.png)
 
