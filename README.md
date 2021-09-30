@@ -1,4 +1,4 @@
-## Procedural Bodies in the Godot Game Engine
+# Procedural Bodies in the Godot Game Engine
 
 Implementation and explanation of how to create meshes and collision shapes by rotating a function around the y-axis. 
 
